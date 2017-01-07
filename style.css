@@ -91,10 +91,13 @@ header
         margin-right: 25px;
         margin-left: 15px;
     }
-    .global-1 div:nth-of-type(2) {
-      background-color: red;
-      float: right;
-      margin-right: 30px;
+    .global-1 div:nth-of-type(2)
+    {
+        float: right;
+
+        margin-right: 30px;
+
+        background-color: red;
     }
     .global-1 div:last-of-type
     {
@@ -126,5 +129,60 @@ header
         margin-left: 15px;
     }
 }
-}
+
+
+@media screen and (max-width: 320px)
+{
+    .global-1,
+    .global-2,
+    .global-3
+    {
+        width: 320px;
+    }
+    .global-1 div::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    .global-1 div:first-of-type {
+      width: 247px;
+      margin: 0;
+      margin-bottom: 20px;
+      margin-left: 15px;
+      margin-right: 15px;
+
+      background-color: green;
+    }
+    .global-1 div:nth-of-type(2) {
+      width: 247px;
+      float: left;
+      margin: 0;
+      margin-left: 15px;
+      margin-right: 15px;
+
+      background-color: green;
+    }
+    .global-2
+    {
+        width: 247px;
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+    .global-3 div:first-of-type
+    {
+        float: left;
+
+        width: 247px;
+        height: 400px;
+        margin-right: 15px;
+        margin-left: 15px;
+        margin-bottom: 20px;
+    }
+    .global-3 div:last-of-type {
+      width: 247px;
+      margin-right: 15px;
+      margin-left: 15px;
+      margin-bottom: 20px;
+
+    }
 }
